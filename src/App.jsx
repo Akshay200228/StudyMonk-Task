@@ -5,12 +5,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Contact, Candidate, Home, About, Login } from './pages';
 import Preloader from './constants/Preloader';
-import { Route, Routes } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom'
-
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { fetchUser, userAccessToken } from "./utils/fetchUser";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Simulating a delay to show the preloader
@@ -29,41 +30,58 @@ const App = () => {
     });
   }, []);
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const accessToken = userAccessToken();
+    if (!accessToken) {
+      navigate("/login", { replace: true });
+    } else {
+      const [userInfo] = fetchUser();
+      setUser(userInfo);
+    }
+  }, [navigate]);
+
+
   return (
-    <BrowserRouter>
+    <>
       <div className="w-full overflow-hidden scroll-smooth" style={{ backgroundColor: '#0C0E15' }}>
         {isLoading ? (
           // Preloader component
           <Preloader />
         ) : (
           <>
-            <div className={`w-[100vh] ${styles.paddingX} ${styles.flexCenter}`}>
-              <div className={`${styles.boxWidth}`}>
-                <Navbar />
+            {!location.pathname.includes('/login') && (
+              <div className={`w-[100vh] ${styles.paddingX} ${styles.flexCenter}`}>
+                <div className={`${styles.boxWidth}`}>
+                  <Navbar user={user} />
+                </div>
               </div>
-            </div>
+            )}
 
             <div className={`${styles.flexStart}`}>
               <div className={`${styles.boxWidth}`}>
                 <Routes>
+                  <Route path="/login" element={<Login />} />
                   <Route exact path="/" element={<Home />} />
                   <Route path="/candidate" element={<Candidate />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
-                  <Route path="/login" element={<Login />} />
                 </Routes>
               </div>
             </div>
 
-            <div className={`${styles.paddingX} ${styles.flexStart} mt-24 border-t border-gray-500 rounded-t-[100px] rounded-b-none shadow-md bg-[#29347a]`} data-aos="fade">
-            <div className={`${styles.boxWidth}`}>
-              <Footer />
-            </div>
-          </div>
+            {!location.pathname.includes('/login') && (
+              <div className={`${styles.paddingX} ${styles.flexStart} mt-24 border-t border-gray-500 rounded-t-[100px] rounded-b-none shadow-md bg-[#29347a]`} data-aos="fade">
+                <div className={`${styles.boxWidth}`}>
+                  <Footer />
+                </div>
+              </div>
+            )}
           </>
         )}
       </div>
-    </BrowserRouter>
+    </>
   );
 };
 

@@ -33,7 +33,7 @@ const Candidate = () => {
 
   return (
     <motion.div
-      className={`${styles.paddingY} mt-14 flex flex-col lg:flex-row h-screen`}
+      className={`${styles.paddingY} mt-14 mb-14 sm:mb-0 flex flex-col lg:flex-row h-screen`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

@@ -3,7 +3,7 @@ import styles from './style';
 import { Footer, Navbar } from './components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Contact, Candidate, Home, About } from './pages';
+import { Contact, Candidate, Home, About, Login } from './pages';
 import Preloader from './constants/Preloader';
 import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom'
@@ -37,7 +37,7 @@ const App = () => {
           <Preloader />
         ) : (
           <>
-            <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+            <div className={`w-[100vh] ${styles.paddingX} ${styles.flexCenter}`}>
               <div className={`${styles.boxWidth}`}>
                 <Navbar />
               </div>
@@ -50,6 +50,7 @@ const App = () => {
                   <Route path="/candidate" element={<Candidate />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/login" element={<Login />} />
                 </Routes>
               </div>
             </div>

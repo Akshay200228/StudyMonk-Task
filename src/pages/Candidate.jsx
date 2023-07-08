@@ -109,7 +109,7 @@ const Candidate = () => {
         >
           <button
             onClick={handleSearch}
-            className="w-full px-4 py-2 mt-2 font-bold text-white bg-[#03DAC6] rounded lg:w-auto lg:mt-0 lg:ml-2 hover:bg-[#018786] btn whitespace-nowrap"
+            className="w-full px-4 py-2 mt-2 font-bold text-white bg-[#800080] rounded lg:w-auto lg:mt-0 lg:ml-2 hover:bg-[#6674CC] btn whitespace-nowrap"
             >
             Search
           </button>

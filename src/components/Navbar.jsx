@@ -27,33 +27,46 @@ const Navbar = () => {
       </Link>
       <ul className="items-center justify-end hidden space-x-4 sm:flex">
         <li>
-          <Link to="/" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400'>
+          <Link
+            to="/"
+            className="font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400 hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300"
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to="/candidate" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400'>
+          <Link
+            to="/candidate"
+            className="font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400 hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300"
+          >
             Candidate
           </Link>
         </li>
         <li>
-          <Link to="/about" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400'>
+          <Link
+            to="/about"
+            className="font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400 hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300"
+          >
             About
           </Link>
         </li>
         <li>
-          <Link to="/contact" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400'>
+          <Link
+            to="/contact"
+            className="font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400 hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300"
+          >
             Contact
           </Link>
         </li>
       </ul>
+
       <div className="hidden mr-20 space-x-4 sm:flex">
         <button
           type="button"
           className={`py-4 px-6 font-poppins font-medium text-[14px] text-white bg-purple-gradient rounded-[10px] outline-none ${animateButton ? 'animate-pulse' : ''
             }`}
         >
-          Get Started
+          SingUp
         </button>
         <button className="px-4 py-2 text-sm text-white bg-gray-500 rounded-2xl hover:bg-gray-600">
           Login
@@ -75,22 +88,22 @@ const Navbar = () => {
           <div className="mr-10 flex flex-col items-center p-6 bg-black-gradient absolute top-full right-0 mt-2 mx-4 min-w-[140px] rounded-xl sidebar">
             <ul className="flex flex-col items-start justify-end flex-1 mb-4 list-none">
               <li className='mb-2'>
-                <Link to="/" className='font-poppins font-normal cursor-pointer text-[16px] text-white'>
+                <Link to="/" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300'>
                   Home
                 </Link>
               </li>
               <li className='mb-2'>
-                <Link to="/candidate" className='font-poppins font-normal cursor-pointer text-[16px] text-white'>
+                <Link to="/candidate" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300'>
                   Candidate
                 </Link>
               </li>
               <li className='mb-2'>
-                <Link to="/about" className='font-poppins font-normal cursor-pointer text-[16px] text-white'>
+                <Link to="/about" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300'>
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className='font-poppins font-normal cursor-pointer text-[16px] text-white'>
+                <Link to="/contact" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:bg-gray-700 px-3 py-2 rounded-md transition-colors duration-300'>
                   Contact
                 </Link>
               </li>
@@ -103,9 +116,12 @@ const Navbar = () => {
               >
                 Get Started
               </button>
+
+              <Link to="./login">
               <button className="px-8 py-2 mt-4 text-sm text-white bg-gray-500 rounded-2xl hover:bg-gray-600">
                 Login
               </button>
+              </Link>
             </div>
           </div>
         )}

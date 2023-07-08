@@ -109,10 +109,14 @@ const generateAvatarImage = () => {
   return avatarImages[randomIndex];
 };
 
+
 export const candidatesData = [
   {
     id: 1,
     image: generateAvatarImage(),
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    phone: '123-456-7890',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'New York',
     jobRole: 'Software Engineer',
@@ -120,6 +124,9 @@ export const candidatesData = [
   {
     id: 2,
     image: generateAvatarImage(),
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    phone: '987-654-3210',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'San Francisco',
     jobRole: 'Frontend Developer',
@@ -127,6 +134,9 @@ export const candidatesData = [
   {
     id: 3,
     image: generateAvatarImage(),
+    name: 'David Johnson',
+    email: 'david.johnson@example.com',
+    phone: '456-789-0123',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'London',
     jobRole: 'UX Designer',
@@ -134,6 +144,9 @@ export const candidatesData = [
   {
     id: 4,
     image: generateAvatarImage(),
+    name: 'Emily Wilson',
+    email: 'emily.wilson@example.com',
+    phone: '789-012-3456',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'Mumbai',
     jobRole: 'UX Designer',
@@ -141,6 +154,9 @@ export const candidatesData = [
   {
     id: 5,
     image: generateAvatarImage(),
+    name: 'Michael Brown',
+    email: 'michael.brown@example.com',
+    phone: '234-567-8901',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'Hongkong',
     jobRole: 'Full Stack Dev',
@@ -148,6 +164,9 @@ export const candidatesData = [
   {
     id: 6,
     image: generateAvatarImage(),
+    name: 'Sophia Lee',
+    email: 'sophia.lee@example.com',
+    phone: '678-901-2345',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'Tokyo',
     jobRole: 'SDE',
@@ -155,6 +174,9 @@ export const candidatesData = [
   {
     id: 7,
     image: generateAvatarImage(),
+    name: 'Ethan Taylor',
+    email: 'ethan.taylor@example.com',
+    phone: '012-345-6789',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'Karachi',
     jobRole: 'Frontend Dev',
@@ -162,6 +184,9 @@ export const candidatesData = [
   {
     id: 8,
     image: generateAvatarImage(),
+    name: 'Olivia Clark',
+    email: 'olivia.clark@example.com',
+    phone: '345-678-9012',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'Canada',
     jobRole: 'Data Science',
@@ -169,6 +194,9 @@ export const candidatesData = [
   {
     id: 9,
     image: generateAvatarImage(),
+    name: 'Aiden Anderson',
+    email: 'aiden.anderson@example.com',
+    phone: '678-901-2345',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
     location: 'Pune',
     jobRole: 'IOS Dev',
@@ -176,9 +204,11 @@ export const candidatesData = [
   {
     id: 10,
     image: generateAvatarImage(),
+    name: 'Charlotte Turner',
+    email:'charlotte.turner@example.com',
+    phone: '901-234-5678',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante in sem tincidunt hendrerit. Duis pretium neque in maximus sollicitudin. Aenean id lorem vel ante feugiat commodo.',
-    location: 'Banglore',
+    location: 'Bangalore',
     jobRole: 'AI Dev',
   },
-  // Add more candidate objects as needed
 ];

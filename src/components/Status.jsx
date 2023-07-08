@@ -66,7 +66,7 @@ const Status = () => {
             animate={{ scale: inView ? 1 : 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span>5</span>+
+            <span>500</span>+
           </motion.div>
           <motion.div
             className="font-medium text-center"
@@ -74,9 +74,9 @@ const Status = () => {
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Landing Pages
+            Digital Recruitment
             <br />
-            Templates
+            Solution App
           </motion.div>
         </motion.div>
 
@@ -92,7 +92,7 @@ const Status = () => {
             animate={{ x: inView ? 0 : '', opacity: inView ? 1 : 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span>10</span>+
+            <span>100</span>+
           </motion.div>
           <motion.div
             className="font-medium text-center"
@@ -100,9 +100,9 @@ const Status = () => {
             animate={{ opacity: inView ? 1 : 0, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Buttons
+            Happy Customers
             <br />
-            Animations
+            With this App
           </motion.div>
         </motion.div>
 
@@ -118,7 +118,7 @@ const Status = () => {
             animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span>10</span>+
+            <span>100</span>+
           </motion.div>
           <motion.div
             className="font-medium text-center"
@@ -126,9 +126,9 @@ const Status = () => {
             animate={{ opacity: inView ? 1 : 0, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            Cards
+            Done Projects
             <br />
-            Components
+            Last Year
           </motion.div>
         </motion.div>
 
@@ -144,7 +144,7 @@ const Status = () => {
             animate={{ opacity: inView ? 1 : 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span>10</span>+
+            <span>999</span>+
           </motion.div>
           <motion.div
             className="font-medium text-center"
@@ -152,9 +152,9 @@ const Status = () => {
             animate={{ opacity: inView ? 1 : 0, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}
           >
-            Loader
+            Stuy Monk
             <br />
-            Animation
+            Rate
           </motion.div>
         </motion.div>
       </div>

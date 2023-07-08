@@ -37,7 +37,7 @@ const Login = () => {
       position={"relative"}
     >
       <Image 
-        src='https://img.freepik.com/premium-photo/income-expenses-concept-with-yellow-background-3d-rendering_519469-343.jpg?w=2000' 
+        src='https://media.istockphoto.com/id/1062562640/photo/human-resource-management-and-recruitment-employment-business-concept.jpg?s=612x612&w=0&k=20&c=TCpUhbY0UqgLcj98hgieI8-ablMmsukiYQBdTWGNL1E=' 
         objectFit="cover" width={"full"} height={"full"}
       />
       <Flex

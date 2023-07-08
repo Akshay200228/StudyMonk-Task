@@ -68,28 +68,28 @@ export const testimonials = {
 
 export const features = {
   feature1: {
-    pretitle: 'Alwalys online',
-    title: 'Real-time support with cloud',
+    pretitle: 'Efficient Hiring Process',
+    title: 'Streamline Your Recruitment',
     subtitle:
-      'Real-time support with cloud enables immediate assistance and guidance using cloud-based technology, from anywhere with an internet connection.',
+      'Our online recruitment solution streamlines the hiring process, making it efficient and effective for hiring managers and HR professionals. Easily manage job postings, track applicants, and collaborate with team members, saving you time and effort.',
     btnLink: 'Learn more',
     btnIcon: ArrowRightImg,
     image: suitModel,
   },
   feature2: {
-    pretitle: 'Free some cost',
-    title: 'Save cost for you and family',
+    pretitle: 'Powerful Candidate Search',
+    title: 'Find the Right Talent',
     subtitle:
-      'Saving costs for you and your family can be achieved through smart financial planning, such as creating a budget, reducing unnecessary expenses, and exploring cost-saving opportunities like discounts and rewards programs.',
+      'Our solution provides a powerful candidate search functionality, allowing you to quickly find and identify the right talent for your organization. Utilize advanced filters, keyword search, and customizable criteria to narrow down your candidate pool and make informed hiring decisions.',
     btnLink: 'Learn more',
     btnIcon: ArrowRightImg,
     image: suitModel2,
   },
   feature3: {
-    pretitle: 'Use anytime',
-    title: 'Use anytime when you need',
+    pretitle: 'Collaborative Hiring',
+    title: 'Seamless Team Collaboration',
     subtitle:
-      'A useful tool to have anytime you need is a planner or organizer, which can help you keep track of important tasks, appointments, and deadlines, and ensure you stay on top of your schedule and responsibilities.',
+      'Enable seamless collaboration among hiring teams with our platform. Share candidate profiles, leave comments, and evaluate applicants together. Enhance communication and decision-making processes, ensuring a unified and efficient hiring approach.',
     btnLink: 'Learn more',
     btnIcon: ArrowRightImg,
     image: suitModel3,

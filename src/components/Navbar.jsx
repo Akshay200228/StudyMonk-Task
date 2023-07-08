@@ -18,11 +18,13 @@ const Navbar = () => {
       className="fixed top-0 z-50 flex items-center justify-between w-full py-4 navbar backdrop-filter backdrop-blur-lg bg-opacity-70"
       data-aos='fade-down' data-aos-delay='200'
     >
-      <img
-        src={logo6}
-        alt="logo"
-        className="w-[124px] h-[32px]"
-      />
+      <Link to='/'>
+        <img
+          src={logo6}
+          alt="logo"
+          className="w-[124px] h-[32px]"
+        />
+      </Link>
       <ul className="items-center justify-end hidden space-x-4 sm:flex">
         <li>
           <Link to="/" className='font-poppins font-normal cursor-pointer text-[16px] text-white hover:text-purple-400'>

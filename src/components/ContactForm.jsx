@@ -1,112 +1,101 @@
 import React, { useState } from 'react';
-import Select from 'react-select';
-import styles from '../style';
-import { candidatesData } from '../constants/index';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-const uniqueLocations = Array.from(new Set(candidatesData.map(candidate => candidate.location)));
+const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-const countryOptions = uniqueLocations.map(location => ({
-  value: location,
-  label: location,
-}));
-
-const Candidate = () => {
-  const [selectedLocation, setSelectedLocation] = useState(null);
-  const [searchJobRole, setSearchJobRole] = useState('');
-  const [filteredCandidates, setFilteredCandidates] = useState(candidatesData);
-
-  const handleSearch = () => {
-    const filtered = candidatesData.filter(
-      (candidate) =>
-        (!selectedLocation || candidate.location === selectedLocation.value) &&
-        candidate.jobRole.toLowerCase().includes(searchJobRole.toLowerCase())
-    );
-    setFilteredCandidates(filtered);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    console.log('Form submitted');
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+    // Reset form fields
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
-  const handleClearFilters = () => {
-    setSelectedLocation(null);
-    setSearchJobRole('');
-    setFilteredCandidates(candidatesData);
-  };
+  const [formRef, inView] = useInView({
+    triggerOnce: true, // Trigger the animation once when the form comes into view
+    threshold: 0.2, // Percentage of the form's visibility required to trigger the animation
+  });
 
   return (
-    <div className={`${styles.paddingY} mt-14 flex flex-col lg:flex-row h-screen`}>
-      <div className="w-full px-4">
-        <h2 className="mb-4 text-2xl font-bold text-white">Search Candidates</h2>
-        <div className="flex mb-4 space-x-4">
-          <div className="w-1/2">
-            <label htmlFor="locationSelect" className="block text-dimWhite">
-              Location:
-            </label>
-            <Select
-              id="locationSelect"
-              options={countryOptions}
-              value={selectedLocation}
-              onChange={(option) => setSelectedLocation(option)}
-              className="w-full"
-              isClearable
-              placeholder="Select location..."
-            />
-          </div>
-          <div className="w-1/2">
-            <label htmlFor="jobRoleInput" className="block text-dimWhite">
-              Job Role:
-            </label>
-            <input
-              id="jobRoleInput"
-              type="text"
-              value={searchJobRole}
-              onChange={(e) => setSearchJobRole(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-            />
-          </div>
-        </div>
-        <div className="flex space-x-4">
-          <button
-            onClick={handleSearch}
-            className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
-          >
-            Search
-          </button>
-          <button
-            onClick={handleClearFilters}
-            className="px-4 py-2 font-bold text-white bg-red-500 rounded hover:bg-red-700"
-          >
-            Clear Filters
-          </button>
-        </div>
-        <hr className="my-6 border-gray-500" />
-      </div>
-
-      <div className="w-full px-4 mt-4">
-        <h2 className="text-2xl font-bold text-white">Candidate List</h2>
-        <div className="grid grid-cols-1 gap-8 mt-4 text-white">
-          {filteredCandidates.map((candidate) => (
-            <div key={candidate.id} className="bg-white rounded shadow">
-              <div className="flex items-center p-4">
-                <img
-                  src={candidate.image}
-                  alt={`Candidate ${candidate.id}`}
-                  className="w-16 h-16 mr-4 rounded-full"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold">{candidate.name}</h3>
-                  <p className="text-gray-500">{candidate.jobRole}</p>
-                  <div className="mt-4">
-                    <p className="text-sm text-gray-600">Contact Information:</p>
-                    <p>{candidate.email}</p>
-                    <p>{candidate.phone}</p>
-                  </div>
-                </div>
-              </div>
-              <p className="p-4 mt-2">{candidate.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <motion.form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="max-w-lg mx-auto"
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: 0.2 }}
+    >
+      <h2 className="mb-4 md:text-[36px] sm:text-[36px] text-[26px] font-bold text-gradient">Contact Me</h2>
+      <motion.div
+        className="mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <label htmlFor="name" className="block mb-2 font-semibold text-gray-300">
+          Name:
+        </label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+        />
+      </motion.div>
+      <motion.div
+        className="mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <label htmlFor="email" className="block mb-2 font-semibold text-gray-300">
+          Email:
+        </label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+        />
+      </motion.div>
+      <motion.div
+        className="mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <label htmlFor="message" className="block mb-2 font-semibold text-gray-300">
+          Message:
+        </label>
+        <textarea
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+        ></textarea>
+      </motion.div>
+      <motion.button
+        type="submit"
+        className="px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        Submit
+      </motion.button>
+    </motion.form>
   );
 };
 
-export default Candidate;
+export default ContactForm;

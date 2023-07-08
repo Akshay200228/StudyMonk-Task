@@ -109,7 +109,7 @@ const generateAvatarImage = () => {
   return avatarImages[randomIndex];
 };
 
-
+  
 export const candidatesData = [
   {
     id: 1,

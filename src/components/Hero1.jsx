@@ -33,9 +33,12 @@ const Hero1 = () => {
               <Typewriter
                 options={{
                   strings: [
-                    '<span class="gradient-text">Landing page Templates</span>',
-                    '<span class="gradient-text">Buttons Animations</span>',
-                    '<span class="gradient-text">Loader Animations</span>',
+                    '<span class="gradient-text">Streamlining the Hiring Process</span>',
+                    '<span class="gradient-text">Empowering HR Professionals</span>',
+                    '<span class="gradient-text">Efficient Talent Acquisition</span>',
+                    '<span className="gradient-text">Seamless Candidate Search</span>',
+                    '<span className="gradient-text">Collaborative Hiring Solutions</span>',
+                    '<span className="gradient-text">Transforming Recruitment Efforts</span>',
                   ],
                   autoStart: true,
                   loop: true,
@@ -62,7 +65,7 @@ const Hero1 = () => {
               />
 
             </span>{' '}
-            For Your <span className="text-gradient">WEBSITE</span>
+            For Your <span className="text-gradient">Digital Recruitment Solution App</span>
           </h1>
         </div>
       </motion.div>

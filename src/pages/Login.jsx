@@ -51,7 +51,7 @@ const Login = () => {
         alignItems={"center"}
       >
         <HStack>
-          <div className="bg-gray-700 rounded-lg">
+          <div className="bg-white rounded-lg">
             <Button
               leftIcon={<FcGoogle fontSize={30} />}
               colorScheme="whiteAlpha"
@@ -59,7 +59,7 @@ const Login = () => {
               onClick={() => login()}
             >
               <h1
-                className="text-3xl text-white "
+                className="text-3xl text-purple-900 "
               >
                 Signin with Google
               </h1>

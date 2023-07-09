@@ -61,6 +61,14 @@ const Navbar = ({ user }) => {
       </ul>
 
       <div className="hidden mr-20 space-x-4 sm:flex">
+        <button
+          type="button"
+          className={`py-4 px-6 font-poppins font-medium text-[14px] text-white bg-purple-gradient rounded-[10px] outline-none ${animateButton ? 'animate-pulse' : ''
+            }`}
+          onClick={() => window.open('https://personal-portfolio-theta-nine.vercel.app/', '_blank')}
+        >
+          Hire Me!
+        </button>
         <Menu>
           <MenuButton>
             <Image
@@ -136,6 +144,13 @@ const Navbar = ({ user }) => {
             </ul>
 
             <div className="flex flex-col items-center">
+              <button
+                type="button"
+                className="py-3 px-2 mb-6 sm:mb-0 font-poppins font-medium text-[14px] text-primary bg-purple-gradient rounded-[10px] outline-none"
+                onClick={() => window.open('https://personal-portfolio-theta-nine.vercel.app/', '_blank')}
+              >
+                Get Started
+              </button>
               <Menu>
                 <MenuButton>
                   <Image
